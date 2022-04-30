@@ -1,0 +1,34 @@
+<div
+  class="bg-image"
+  style="background-image: url('/assets/img/background.png'); height: 100%"
+>
+  <div
+    class="container justify-content-evenly mw-100 pt-3"
+    *ngIf="!isLoading; else else_b"
+  >
+    <div class="ms-3">
+      <app-form-card-search></app-form-card-search>
+    </div>
+
+    <div class="col-11 row justify-content-evenly">
+      <div
+        class="bg-white col-4 mb-4 ms-2"
+        style="width: 18rem"
+        *ngFor="let card of cardsData.cards"
+      >
+        <app-card-magic [card]="card"> </app-card-magic>
+      </div>
+    </div>
+  </div>
+
+  <app-pagination
+    currentPageString="{{ currentPage + 0 }}"
+    [move]="move"
+  ></app-pagination>
+
+  <ng-template #else_b>
+    <div class="spinner-border text-warning" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </ng-template>
+</div>
