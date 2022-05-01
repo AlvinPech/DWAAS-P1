@@ -6,11 +6,13 @@ const pageSize = 40;
 const POKEMON_API = `https://api.pokemontcg.io/v2/cards`;
 const MAGIC_API = `https://api.magicthegathering.io/v1/cards`;
 const YUGIOH_API = `https://db.ygoprodeck.com/api/v7/cardinfo.php`;
+const DIGIMON_API = `https://digimoncard.io/api-public/search.php?`;
 
 export const deckURI = {
     Pokemon: POKEMON_API,
     Yugioh: YUGIOH_API,
     Magic: MAGIC_API,
+    Digimon: DIGIMON_API,
 };
 
 export const getApiURI = (card: DeckType, page: number) => {
@@ -35,6 +37,7 @@ const searchParamApi = {
     Pokemon: 'q',
     Yugioh: 'fname',
     Magic: 'name',
+    Digimon: 'n',
 };
 
 export const getApiSearchURI = (card: DeckType, search: string) => {

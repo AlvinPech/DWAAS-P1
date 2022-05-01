@@ -2,6 +2,7 @@ export enum DeckType {
     Pokemon = 'Pokemon',
     Yugioh = 'Yugioh',
     Magic = 'Magic',
+    Digimon = 'Digimon',
 }
 
 export interface Card {

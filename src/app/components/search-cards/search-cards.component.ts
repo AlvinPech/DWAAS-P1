@@ -56,8 +56,15 @@ export class SearchCardsComponent implements OnInit {
           card: this.cardName,
           game: this.category
         },
-      });
+      });     
+    }
+    if(this.category === DeckType.Digimon){
+      this.router.navigate(['/digimon/'], {
+        queryParams: { 
+          card: this.cardName,
+          game: this.category
+        },
+      });     
     }
   }
-
 }

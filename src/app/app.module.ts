@@ -25,6 +25,9 @@ import { DeckBuilderService } from './service/builder/deck-builder.service';
 import { DeckSelectorService } from './service/deckselector/deck-selector.service';
 import { PokemonCardsService } from './service/pokemon/pokemon-cards.service';
 import { YugiohCardsService } from './service/yugioh/yugioh-cards.service';
+import { DigimonCardComponent } from './components/digimon-card/digimon-card.component';
+import { DigimonCardsComponent } from './components/digimon-cards/digimon-cards.component';
+import { CardDigimonComponent } from './components/cards/card-digimon/card-digimon.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,7 @@ import { YugiohCardsService } from './service/yugioh/yugioh-cards.service';
     CardMagicComponent,
     CardPokemonComponent,
     CardYugiohComponent,
+    CardDigimonComponent,
     DeckBuilderComponent,
     DeckSelectorComponent,
     FormCardSearchComponent,
@@ -44,7 +48,9 @@ import { YugiohCardsService } from './service/yugioh/yugioh-cards.service';
     SearchCardsComponent,
     YugiohCardComponent,
     YugiohCardsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DigimonCardComponent,
+    DigimonCardsComponent
   ],
   imports: [
     BrowserModule,

@@ -46,9 +46,11 @@ export class DeckBuilderComponent implements OnInit {
       .getAllCards(this.currPage, DeckType[cardType as DeckType])
       .then(
         async (response) => {
+          console.log(response);
           this.cardsData = deckFactory(
             response,
             DeckType[cardType as DeckType]
+            
           );
         },
         (error) => {
