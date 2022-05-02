@@ -62,6 +62,7 @@ export class MagicCardsComponent implements OnInit {
     await this.cardsService.searchCardsByName(this.cardToSearch, this.currentPage).then(
       async (response) => {
        this.cardsData = response;
+       console.log(this.cardsData);
       },
       (error) => {
         alert('error' + error.statusNext);

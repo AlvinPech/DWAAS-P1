@@ -11,6 +11,8 @@ import { PokemonCardsComponent } from './components/pokemon-cards/pokemon-cards.
 import { SearchCardsComponent } from './components/search-cards/search-cards.component';
 import { YugiohCardComponent } from './components/yugioh-card/yugioh-card.component';
 import { YugiohCardsComponent } from './components/yugioh-cards/yugioh-cards.component';
+import { DigimonCardComponent } from './components/digimon-card/digimon-card.component';
+import { DigimonCardsComponent } from './components/digimon-cards/digimon-cards.component';
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'magic', component: MagicCardsComponent },
@@ -22,6 +24,8 @@ const routes: Routes = [
   { path: 'yugioh', component: YugiohCardsComponent },
   { path: 'yugioh/:pagenumber', component: YugiohCardsComponent },
   { path: 'yugioh/card/:card-name', component: YugiohCardComponent },
+  { path: 'digimon', component: DigimonCardsComponent },
+  { path: 'digimon/card/:card-name', component: DigimonCardComponent },
   { path: 'deckselector', component: DeckSelectorComponent },
   { path: 'search', component: SearchCardsComponent },
   { path: 'builder/:cardType', component: DeckBuilderComponent },
