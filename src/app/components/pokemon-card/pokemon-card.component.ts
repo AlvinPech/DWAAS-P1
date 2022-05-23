@@ -10,7 +10,7 @@ import { PokemonCardsService } from 'src/app/service/pokemon/pokemon-cards.servi
   styleUrls: ['./pokemon-card.component.css']
 })
 export class PokemonCardComponent implements OnInit {
-
+  public path: string = window.location.href;
   isLoading = false;
   cardData !: Card_Data;
   

@@ -4,10 +4,20 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/deckselector">¡Construye tu Mazo!</a>
+          <a class="nav-link" *ngIf="loggedIn" routerLink="/deckselector">¡Construye tu Mazo!</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/yugioh">Buscador de Cartas</a>
+          <a class="nav-link" routerLink="/pokemon">Buscador de Cartas</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="isAdmin" routerLink="/admin">Admin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="!loggedIn" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="loggedIn" (click)="logout()"  routerLink="/">Logout</a>
         </li>
       </ul>
     </div>

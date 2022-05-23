@@ -28,6 +28,14 @@ import { YugiohCardsService } from './service/yugioh/yugioh-cards.service';
 import { DigimonCardComponent } from './components/digimon-card/digimon-card.component';
 import { DigimonCardsComponent } from './components/digimon-cards/digimon-cards.component';
 import { CardDigimonComponent } from './components/cards/card-digimon/card-digimon.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+
+
+//Second iteration
+import { QRCodeModule } from 'angular2-qrcode';
+import { MyDecksComponent } from './components/my-decks/my-decks.component';
 
 @NgModule({
   declarations: [
@@ -50,14 +58,20 @@ import { CardDigimonComponent } from './components/cards/card-digimon/card-digim
     YugiohCardsComponent,
     PageNotFoundComponent,
     DigimonCardComponent,
-    DigimonCardsComponent
+    DigimonCardsComponent,
+    AdminComponent,
+    LoginComponent,
+    RegisterComponent,
+    MyDecksComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    QRCodeModule,
+
   ],
   providers: [YugiohCardsService, PokemonCardsService, DeckSelectorService, DeckBuilderService],
   bootstrap: [AppComponent]

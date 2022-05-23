@@ -10,7 +10,7 @@ import { MagicService } from 'src/app/service/magic/magic.service';
   styleUrls: ['./magic-card.component.css']
 })
 export class MagicCardComponent implements OnInit {
-
+  public path: string = window.location.href;
   isLoading = false;
   cardData !: Card_Data;
   
